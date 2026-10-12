@@ -1,4 +1,4 @@
-# Linh's Next Adventure — Farewell Card
+# Linh's Next Adventure, Farewell Card
 
 A responsive single-page farewell card built with HTML, CSS, and JavaScript.
 
