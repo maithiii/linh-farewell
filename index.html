@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#f8eadb" />
+<title>Linh's Next Adventure ✦ A Farewell</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Kalam:wght@400;700&family=Playfair+Display:wght@500;600;700&display=swap');
+:root{--ink:#263453;--muted:#68718a;--paper:#fff9ef;--rose:#ef8292;--blue:#a9c7e8;--gold:#efc67d;--lav:#c7b7e9;--shadow:0 16px 40px #26345318}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:#f7ecdf;font-family:'DM Sans',sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}.topbar{position:fixed;z-index:10;top:14px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:5px;padding:8px;background:#fffaf0df;backdrop-filter:blur(12px);border:1px solid #fff;border-radius:999px;box-shadow:0 8px 25px #27345220;max-width:calc(100% - 28px)}.topbar a{font-size:.78rem;padding:9px 13px;border-radius:999px;white-space:nowrap}.topbar a:hover{background:#f7e4d6}.music{position:fixed;right:18px;top:17px;z-index:11;border:1px solid #ffffff88;border-radius:999px;background:#263453df;color:#fff;padding:10px 14px;display:flex;gap:9px;align-items:center;font-size:.78rem;box-shadow:var(--shadow)}.music span{font-size:1rem}.hero{min-height:680px;height:92vh;max-height:900px;position:relative;display:flex;align-items:center;overflow:hidden;background:linear-gradient(110deg,#d8e8f7 0%,#f8d9c5 54%,#f6c6b6 100%)}.hero:before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,#dcecf9 0%,#eef6fb 58%,#fbe8dc 100%);opacity:1}.hero:after{content:'☁';position:absolute;right:12%;top:20%;font-size:clamp(4rem,10vw,8rem);color:#ffffffa8;text-shadow:-130px 110px 0 #ffffff88,-420px 20px 0 #ffffff70;pointer-events:none}.hero:after{content:'✦  ·  ˚  ✧     ·  ˚     ✦';position:absolute;right:7%;top:23%;font-size:clamp(1.5rem,4vw,3rem);letter-spacing:10px;color:#fff7d5;text-shadow:0 0 25px #fff}.hero-copy{position:relative;z-index:1;width:min(650px,90%);margin:95px 0 30px clamp(22px,8vw,130px)}
+/* Envelope intro */
+.intro{position:fixed;inset:0;z-index:50;display:grid;place-items:center;padding:24px;background:linear-gradient(180deg,#dcecf9,#eef6fb 58%,#fbe8dc);transition:opacity .65s ease,visibility .65s ease}.intro.hidden{opacity:0;visibility:hidden;pointer-events:none}.intro-cloud{position:absolute;color:#fff;font-size:clamp(4rem,10vw,8rem);opacity:.8;animation:float 6s ease-in-out infinite}.intro-cloud.one{top:9%;left:8%}.intro-cloud.two{right:8%;bottom:12%;animation-delay:-2s}.intro-card{position:relative;width:min(440px,100%);text-align:center;padding:34px 26px 30px;border-radius:22px;background:#fffaf1;border:1px solid #fff;box-shadow:0 22px 60px #26345320;transform:translateY(0);transition:transform .6s ease}.intro-card:before{content:'✦  ✧  ·  ✧  ✦';display:block;color:#e7b86d;letter-spacing:8px;margin-bottom:18px}.intro-kicker{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:#b76d78;font-weight:700}.intro-card h1{font:700 clamp(2.3rem,7vw,3.6rem)/1.05 'Kalam',cursive;margin:12px 0;color:var(--ink)}.intro-card p{line-height:1.7;color:var(--muted);margin:0 auto 14px;max-width:320px}.envelope{width:118px;height:78px;margin:22px auto 24px;position:relative;background:#e98b99;border-radius:5px;box-shadow:0 8px 16px #d8758740;cursor:pointer}.envelope:before{content:'';position:absolute;inset:0;background:#f5b4bc;clip-path:polygon(0 0,50% 55%,100% 0);border-radius:5px 5px 0 0;transform-origin:top;transition:transform .45s ease;z-index:2}.envelope:after{content:'♡';position:absolute;z-index:3;left:0;right:0;top:25px;color:#fff;font-size:1.6rem}.envelope.open:before{transform:rotateX(180deg)}.intro.opening .intro-card{transform:translateY(-10px) scale(1.02)}.intro .cta{margin-top:0}.confetti{position:fixed;inset:0;z-index:60;pointer-events:none;overflow:hidden}.confetti-piece{position:absolute;top:-18px;width:9px;height:14px;opacity:.95;animation:confetti-fall var(--dur,2.6s) linear forwards;animation-delay:var(--delay,0s);transform:rotate(var(--rot,0deg))}@keyframes confetti-fall{to{transform:translate3d(var(--drift,30px),110vh,0) rotate(760deg);opacity:.85}}
+@media(max-width:520px){.intro-card{padding:28px 20px}.envelope{margin:18px auto 22px}}.eyebrow{letter-spacing:.18em;text-transform:uppercase;font-size:.75rem;font-weight:700;color:#b76d78}.hero h1{font-family:'Kalam',cursive;font-size:clamp(3.4rem,8vw,7.4rem);line-height:.92;letter-spacing:-.04em;margin:15px 0 20px;max-width:650px}.hero h1 em{font-style:normal;color:#dc7589;display:block}.hero p{font-size:clamp(1rem,1.8vw,1.2rem);line-height:1.75;max-width:440px;color:#45516b}.cta{display:inline-flex;align-items:center;gap:12px;background:#e9788b;color:white;border:0;border-radius:999px;padding:14px 22px;margin-top:12px;box-shadow:0 8px 20px #e9788b40;transition:.25s}.cta:hover{transform:translateY(-3px);box-shadow:0 12px 25px #e9788b55}.scribble{font-family:'Kalam',cursive;color:#a96c72;position:absolute;right:9%;bottom:13%;transform:rotate(-8deg);font-size:1.25rem}.floating{position:absolute;animation:float 5s ease-in-out infinite}.plane{right:15%;top:25%;font-size:3.4rem;transform:rotate(-18deg)}.spark{left:8%;bottom:18%;font-size:2rem;color:#e9ad61;animation-delay:-2s}@keyframes float{0%,100%{translate:0 0}50%{translate:0 -14px}}.section{padding:82px clamp(20px,7vw,105px);position:relative}.paper{background:var(--paper);background-image:radial-gradient(#d4bba055 .7px,transparent .7px);background-size:14px 14px}.section-head{display:flex;gap:22px;align-items:flex-start;margin-bottom:34px}.num{flex:0 0 auto;background:#8098a4;color:#fff;padding:7px 11px;border-radius:8px;transform:rotate(-4deg);font-size:.85rem}.section h2{font:600 clamp(2.2rem,4.5vw,3.8rem)/1.05 'Kalam',cursive;margin:0 0 8px}.section-head p{max-width:550px;color:var(--muted);line-height:1.65;margin:0}.journey{display:grid;grid-template-columns:repeat(5,1fr);gap:15px;position:relative}.journey:before{content:'';position:absolute;top:30px;left:7%;right:7%;border-top:2px dashed #c6a899}.stop{position:relative;text-align:center;padding:0 7px}.stop .emoji{width:62px;height:62px;display:grid;place-items:center;margin:0 auto 12px;background:#fff;border:2px solid #f0dfd0;border-radius:20px;font-size:1.7rem;transform:rotate(-5deg);position:relative;z-index:1;box-shadow:0 5px 12px #8c6e5b10}.stop:nth-child(even) .emoji{transform:rotate(5deg);background:#fff3f1}.stop h3{font:700 1.05rem 'Kalam',cursive;margin:0 0 5px}.stop p{font-size:.84rem;line-height:1.5;color:var(--muted);margin:0}.memories{background:#f5e7d8}.polaroids{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}.polaroid{background:white;padding:10px 10px 18px;box-shadow:0 12px 24px #3b35501a;transform:rotate(var(--tilt,-3deg));transition:transform .3s,box-shadow .3s}.polaroid:nth-child(even){--tilt:3deg;margin-top:18px}.polaroid:hover{transform:rotate(0) translateY(-8px);box-shadow:0 18px 30px #3b355028}.photo{aspect-ratio:4/3;display:grid;place-items:center;overflow:hidden;background:linear-gradient(135deg,#c9d9e8,#f3c8c5);font-size:3.4rem;position:relative}.photo img{width:100%;height:100%;object-fit:cover;display:block}.photo:after{content:none}.photo video{width:100%;height:100%;object-fit:cover;display:block}.polaroid:nth-child(2) .photo{background:linear-gradient(135deg,#f2d9a9,#d5c7e9)}.polaroid:nth-child(3) .photo{background:linear-gradient(135deg,#c4e1d1,#f3c8bd)}.polaroid:nth-child(4) .photo{background:linear-gradient(135deg,#c9d7f0,#f2d8a8)}.caption{font:1rem 'Kalam',cursive;text-align:center;padding-top:12px}.video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.video-card{background:#fff;border:1px solid #efe2d4;border-radius:16px;padding:10px;box-shadow:0 10px 25px #26345310}.video-card video{width:100%;aspect-ratio:9/16;max-height:440px;object-fit:cover;background:#263453;border-radius:10px;display:block}.video-card p{font:1.05rem 'Kalam',cursive;text-align:center;margin:12px 0 4px}.messages{background:#fdf8ef}.message-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.note{padding:25px 24px 22px;background:#f8c9ca;box-shadow:0 10px 20px #493a3a10;transform:rotate(-1.5deg);min-height:210px;display:flex;flex-direction:column}.note:nth-child(3n+2){background:#cfe1f2;transform:rotate(1.7deg)}.note:nth-child(3n){background:#f5dfaa;transform:rotate(-.5deg)}.note:nth-child(4n){background:#d8ccef}.note .note-text{font:1.12rem/1.5 'Kalam',cursive;flex:1}.note .sign{font:1rem 'Kalam',cursive;text-align:right;margin-top:14px}.chapter{background:linear-gradient(180deg,#293b5e,#202c4b);color:#fff9ed;overflow:hidden;min-height:410px}.chapter:before{content:'✦     ·        ✧       ·     ✦     ·       ✧';position:absolute;top:35px;left:10%;right:10%;font-size:1.8rem;letter-spacing:18px;color:#f4ce91;opacity:.8}.chapter-inner{max-width:950px;margin:auto;display:grid;grid-template-columns:1.4fr 1fr;gap:50px;align-items:center;position:relative;z-index:1}.chapter h2{font-size:clamp(2.7rem,5vw,4.6rem);color:#ffd7b4}.chapter p{line-height:1.8;color:#e6e9f4}.signoff{font:1.6rem 'Kalam',cursive;color:#ffd7b4}.road-signs{display:grid;gap:12px;justify-items:start;transform:rotate(-4deg)}.road-signs span{background:#eabf83;color:#293653;padding:10px 25px;min-width:230px;clip-path:polygon(0 0,92% 0,100% 50%,92% 100%,0 100%,6% 50%);font:1.1rem 'Kalam',cursive}.road-signs span:nth-child(2){margin-left:20px;background:#d8c9ee}.road-signs span:nth-child(3){margin-left:5px;background:#b9d8cf}.footer{text-align:center;background:#202c4b;color:#d8dced;padding:20px;font-size:.78rem}.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:translateY(0)}.toast{position:fixed;bottom:18px;left:50%;transform:translate(-50%,20px);background:#263453;color:#fff;padding:12px 18px;border-radius:999px;opacity:0;pointer-events:none;transition:.3s;z-index:20;font-size:.85rem}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:900px){.topbar{top:auto;bottom:12px;max-width:calc(100% - 16px);overflow:auto}.topbar a{padding:9px 10px;font-size:.7rem}.music{right:10px;top:10px}.hero{min-height:720px;height:auto}.hero:before{background:linear-gradient(90deg,#fff8edee 0%,#fff8edbd 70%,#fff8ed60 100%),url('assets/concept-reference.png') 58% center/cover}.hero-copy{margin:120px 24px 100px}.scribble{right:7%;bottom:6%}.journey{grid-template-columns:repeat(3,1fr);row-gap:30px}.journey:before{display:none}.polaroids{grid-template-columns:repeat(2,1fr);gap:18px}.message-grid{grid-template-columns:repeat(2,1fr)}.chapter-inner{grid-template-columns:1fr;gap:30px}.road-signs{display:flex;flex-wrap:wrap;transform:none}.road-signs span{min-width:0;font-size:.95rem;padding:10px 20px}.road-signs span:nth-child(2),.road-signs span:nth-child(3){margin-left:0}}
+@media(max-width:520px){.hero h1{font-size:3.6rem}.hero p{max-width:330px}.plane{right:8%;top:22%;font-size:2.2rem}.section{padding:60px 20px}.section-head{gap:12px}.journey{grid-template-columns:repeat(2,1fr)}.stop p{font-size:.78rem}.polaroids{gap:12px}.polaroid{padding:7px 7px 14px}.caption{font-size:.88rem}.message-grid{grid-template-columns:1fr;gap:17px}.video-grid{grid-template-columns:1fr;gap:16px}.video-card video{max-height:560px}.note{min-height:170px;padding:20px}.chapter{padding-bottom:90px}.chapter-inner{gap:20px}.road-signs span{font-size:.85rem}.music{font-size:.7rem;padding:8px 10px}.music .music-label{display:none}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+/* Art direction v2 — polished Aries celestial editorial */
+:root{--ink:#281b2b;--muted:#756775;--paper:#fffaf4;--rose:#a73548;--blue:#d9c7c4;--gold:#d6a65e;--lav:#c8b4ca;--shadow:0 22px 60px #281b2b18}
+body{background:#f8f0e9;color:var(--ink)}
+.topbar{background:#fffaf0e8;border-color:#e8d7ca;box-shadow:0 10px 32px #301e2a18}
+.topbar a:hover{background:#f2e2d8;color:#8c263a}
+.music{background:#2c1c2a;color:#fff7eb;border-color:#d7b36c88}
+.hero{height:94vh;min-height:650px;max-height:960px;align-items:center;background:radial-gradient(ellipse at 74% 42%,#f8dfbd 0,#f2c8b7 22%,transparent 48%),linear-gradient(118deg,#f8eee2 0%,#ead4cf 48%,#c99da6 100%)}
+.hero:before{opacity:.8;background:radial-gradient(circle at 75% 38%,#fff9d9 0 2px,transparent 3px),radial-gradient(circle at 81% 23%,#fff9d9 0 1px,transparent 2px),radial-gradient(circle at 65% 19%,#fff9d9 0 2px,transparent 3px),linear-gradient(110deg,#f8eee2aa,#e7c2c9aa)}
+.hero:after{content:'♈';right:12%;top:22%;font-family:Georgia,serif;font-size:clamp(8rem,20vw,18rem);letter-spacing:0;color:#fff8ed45;text-shadow:0 0 1px #a46b6b;transform:rotate(9deg)}
+.hero-copy{width:min(690px,90%);margin-left:clamp(22px,9vw,145px);padding:clamp(24px,4vw,50px);background:#fffaf0b8;border:1px solid #fff9;border-radius:4px 36px 4px 36px;box-shadow:0 24px 70px #6e39401a;backdrop-filter:blur(5px)}
+.eyebrow,.intro-kicker{color:#9e3547;letter-spacing:.19em}
+.hero h1{font-family:'Playfair Display',serif;font-weight:600;font-size:clamp(3.4rem,7.7vw,7rem);line-height:.98;letter-spacing:-.045em;color:#2d1e2d}
+.hero h1 em{color:#a73548;font-style:italic}
+.hero p{color:#5e4d5c}
+.cta{background:#922f43;border-radius:4px 18px 4px 18px;box-shadow:0 9px 24px #922f4330}.cta:hover{background:#742337;box-shadow:0 12px 28px #922f4340}
+.scribble{color:#772c41;background:#fff7e9d9;border:1px solid #fff;padding:18px 22px;right:8%;bottom:12%;border-radius:3px 18px 3px 18px;box-shadow:0 14px 34px #562c3218}
+.plane{right:17%;top:19%;font-size:3.7rem;color:#a73548}.spark{color:#a73548;font-size:2.5rem}
+/* Envelope screen: understated luxury, warm paper, fine constellation lines */
+.intro{background:radial-gradient(ellipse at 50% 35%,#f9e6ce 0%,#eed0ce 42%,#b98291 100%);isolation:isolate}
+.intro:before,.intro:after{content:'';position:absolute;inset:7% 9%;border:1px solid #fff8;border-radius:48% 52% 46% 54%/52% 45% 55% 48%;transform:rotate(-12deg);pointer-events:none;z-index:-1}
+.intro:after{inset:14% 16%;transform:rotate(19deg);border-color:#f9e6c988}
+.intro-cloud{color:#fff5e7;opacity:.72;font-size:clamp(5rem,12vw,9rem)}
+.intro-card{width:min(480px,100%);padding:42px 30px 34px;border-radius:3px 30px 3px 30px;background:linear-gradient(145deg,#fffaf0,#f7e9dc);border:1px solid #fff;box-shadow:0 30px 90px #522c3c30;outline:1px solid #ffffff7a;outline-offset:8px}
+.intro-card:before{content:'✦  ♈  ✧  ✦';color:#b8874b;letter-spacing:9px;font-size:1.05rem}
+.intro-card h1{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,8vw,4rem);letter-spacing:-.04em;color:#2c1c2a}
+.intro-card p{color:#74616c}
+.envelope{width:132px;height:88px;background:#9e3547;border-radius:2px;box-shadow:0 13px 25px #7e273a35;animation:envelope-bob 3.3s ease-in-out infinite}
+.envelope:before{background:#c86d76}.envelope:after{content:'✦';top:29px;color:#fff3d9;font-size:1.4rem}
+@keyframes envelope-bob{0%,100%{translate:0 0;rotate:-1deg}50%{translate:0 -7px;rotate:1deg}}
+.section{padding:clamp(66px,8vw,112px) clamp(20px,7vw,105px)}
+.paper{background-color:#fffaf4;background-image:radial-gradient(#9d6c6c18 .7px,transparent .7px);background-size:17px 17px}
+.section h2{font-family:'Playfair Display',serif;font-weight:600;letter-spacing:-.035em;color:#382333}
+.num{background:#8f3345;border-radius:2px;color:#fff5e8;transform:rotate(-3deg)}
+.journey:before{border-color:#c69d88}.stop .emoji{border-color:#ead7c8;border-radius:50%;background:#fffaf4;box-shadow:0 8px 20px #6b3e3d12}.stop:nth-child(even) .emoji{background:#f8e6e1}
+.memories{background:linear-gradient(145deg,#f2e3d8,#f8eee5 55%,#ead6d2)}
+.polaroid{box-shadow:0 14px 30px #492d3419;border:1px solid #fff}
+.polaroid:hover{box-shadow:0 24px 40px #492d3427}
+.video-card{border:1px solid #ead8cb;border-radius:4px 20px 4px 20px;background:#fffaf4;box-shadow:0 15px 36px #492d3413;padding:12px}
+.video-card video{border-radius:3px 14px 3px 14px}
+.video-card p{font-family:'Playfair Display',serif;color:#482b3b}
+.video-feature{border-color:#c89d64;box-shadow:0 18px 42px #8c4a3820;position:relative}
+.video-ribbon{font-size:.65rem;letter-spacing:.15em;font-weight:700;color:#8f3345;padding:7px 5px 10px;text-align:center}
+.messages{background:#fff8ef}.note{border-radius:2px 18px 2px 18px;box-shadow:0 14px 26px #493a3a12}.note:nth-child(3n+2){background:#f1dfd8}.note:nth-child(3n){background:#f4e6c9}.note:nth-child(4n){background:#e5d8e7}
+.chapter{background:radial-gradient(ellipse at 70% 10%,#613748,#2c1c2a 58%,#211824);border-top:1px solid #d2a15c}
+.chapter:before{content:'✦    ·      ✧       ·      ✦';color:#e4bd7e;letter-spacing:13px}
+.chapter h2{font-family:'Playfair Display',serif;font-style:italic;color:#f0cfa0}.signoff{color:#f0cfa0}
+.road-signs span{background:#d9b77e;color:#322131;clip-path:none;border-radius:2px 12px 2px 12px}.road-signs span:nth-child(2){background:#e5c8c3}.road-signs span:nth-child(3){background:#c6d2c6}
+.footer{background:#211824;color:#e6d8d8;border-top:1px solid #9d704a}
+@media(max-width:700px){.hero{min-height:740px;height:auto;padding:95px 0 80px}.hero-copy{margin:55px auto 30px;padding:26px 22px}.hero:after{right:3%;top:16%;font-size:8rem}.scribble{right:6%;bottom:5%;font-size:1rem}.journey{grid-template-columns:repeat(2,1fr);row-gap:25px}.video-grid{grid-template-columns:1fr}.video-card video{aspect-ratio:16/9;max-height:none}.video-feature video{aspect-ratio:9/16;max-height:580px}.intro:before{inset:4% 3%}.intro:after{inset:10% 8%}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+
+
+/* Art direction v3 — rich burgundy, oxblood and warm champagne; editorial photo layout */
+:root{--ink:#2b1722;--muted:#78636d;--paper:#fffaf3;--rose:#8f263f;--blue:#d9c1bd;--gold:#d7b16e;--lav:#cbb8c3;--shadow:0 22px 60px #28121d22}
+body{background:#f3e9e1;color:var(--ink)}
+.hero{background:radial-gradient(ellipse at 78% 38%,#c88779 0,#8f3b50 23%,transparent 50%),linear-gradient(118deg,#f7eee5 0%,#e5c9c4 44%,#6e2b40 100%)}
+.hero:before{opacity:1;background:radial-gradient(ellipse at 82% 25%,#f7d9aa55 0 1px,transparent 2px),radial-gradient(ellipse at 69% 60%,#fff1d633 0 2px,transparent 3px),linear-gradient(112deg,#f8efe5 0%,#eedbd1bb 39%,#64263b55 100%)}
+.hero:after{content:'';right:8%;top:15%;width:clamp(250px,38vw,580px);height:clamp(250px,38vw,580px);border:1px solid #fff6;border-radius:50%;box-shadow:0 0 0 26px #ffffff08,0 0 0 58px #ffffff06;}
+.hero-copy{background:#fffaf0e8;border:1px solid #fff9;box-shadow:0 28px 85px #35142125;backdrop-filter:blur(10px)}
+.hero h1{color:#321a28}.hero h1 em{color:#8f263f}.eyebrow,.intro-kicker{color:#8f263f}
+.cta{background:linear-gradient(115deg,#8f263f,#632138);color:#fff8ef;box-shadow:0 10px 25px #63213830}.cta:hover{background:#54182e}
+.intro{background:radial-gradient(ellipse at 50% 25%,#fff1d9 0%,#e4bfc0 45%,#65283e 100%)}
+.intro:before{border-color:#fff9}.intro:after{border-color:#e6c17d88}
+.intro-card{background:linear-gradient(145deg,#fffaf2,#f4e4d9);box-shadow:0 32px 100px #38152345}
+.envelope{background:#76233b;box-shadow:0 14px 30px #63213850}.envelope:before{background:#b85b6d}
+.section h2{color:#321a28}.num{background:#76233b}.paper{background-color:#fffaf3;background-image:radial-gradient(#8f263f12 .7px,transparent .7px)}
+.memories{background:linear-gradient(135deg,#e5c8c0 0%,#f6ece3 48%,#d8b4b7 100%)}
+/* Masonry columns let every supplied photo keep its own natural aspect ratio. */
+.polaroids{display:block;columns:4 220px;column-gap:24px}
+.polaroid{display:inline-block;width:100%;break-inside:avoid;margin:0 0 24px;padding:10px 10px 16px;background:#fffdf9;transform:none!important;border:1px solid #ffffff;box-shadow:0 12px 28px #492d341c;}
+.polaroid:nth-child(even){margin-top:0}
+.polaroid:hover{transform:translateY(-5px)!important;box-shadow:0 22px 38px #492d342b}
+.photo{display:block;aspect-ratio:auto;height:auto;overflow:visible;background:transparent;font-size:0;line-height:0}
+.photo img{display:block;width:100%;height:auto;max-height:none;object-fit:contain}
+.caption{font-family:'Playfair Display',serif;font-size:.92rem;line-height:1.45;color:#4b2a39;padding:13px 4px 0}
+.video-card{background:#fffaf3;border-color:#d8b8ad}.video-feature{background:#fff8ed;border-color:#c59b60}
+.messages{background:#f8efe6}.note{background:#f0d5d1;border-top:2px solid #b76a76}.note:nth-child(3n+2){background:#eadde0;border-top-color:#8f263f}.note:nth-child(3n){background:#f2e3c7;border-top-color:#c39b57}.note:nth-child(4n){background:#e5d8e1;border-top-color:#9b748a}
+.chapter{background:radial-gradient(ellipse at 75% 0%,#71364b,#321b2a 56%,#21151e);border-top:1px solid #d7b16e}.chapter h2{color:#efd09a}.signoff{color:#efd09a}.road-signs span{background:#dfbd7c}.road-signs span:nth-child(2){background:#e7c8c2}.road-signs span:nth-child(3){background:#c6d0c5}
+.footer{background:#21151e;border-top:1px solid #9b704d}
+@media(max-width:900px){.polaroids{columns:3 190px;column-gap:18px}.polaroid{margin-bottom:18px}}
+@media(max-width:600px){.polaroids{columns:2 130px;column-gap:12px}.polaroid{padding:7px 7px 12px;margin-bottom:14px}.caption{font-size:.78rem;padding-top:10px}.hero:after{right:-18%;top:14%;width:260px;height:260px}.hero-copy{margin:55px 18px 30px;padding:25px 20px}}
+
+
+/* Final video gallery: all six clips share one consistent grid and card style. */
+.video-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  align-items:start;
+  gap:22px;
+}
+.video-grid .video-card,
+.video-grid .video-feature{
+  grid-column:auto;
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+  padding:12px;
+  border:1px solid #d8b8ad;
+  border-radius:4px 20px 4px 20px;
+  background:#fffaf3;
+  box-shadow:0 15px 36px #492d3413;
+}
+.video-grid .video-card video,
+.video-grid .video-feature video{
+  display:block;
+  width:100%;
+  height:auto;
+  aspect-ratio:9/16;
+  max-height:420px;
+  object-fit:contain;
+  background:#21151e;
+  border-radius:3px 14px 3px 14px;
+}
+.video-grid .video-card p,
+.video-grid .video-feature p{
+  width:100%;
+  margin:13px 4px 5px;
+  padding:0;
+  border:0;
+  text-align:center;
+  font:1.02rem 'Playfair Display',serif;
+  line-height:1.45;
+  color:#482b3b;
+}
+.video-grid .video-ribbon{display:none}
+@media(max-width:900px){
+  .video-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+}
+@media(max-width:600px){
+  .video-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .video-grid .video-card,
+  .video-grid .video-feature{padding:7px;border-radius:4px 14px 4px 14px}
+  .video-grid .video-card video,
+  .video-grid .video-feature video{max-height:none}
+  .video-grid .video-card p,
+  .video-grid .video-feature p{font-size:.88rem;margin:10px 2px 4px}
+}
+
+</style>
+<style>
+/* Hero portrait: preserve the source photo proportions inside the circular frame. */
+.hero{isolation:isolate}
+.hero-portrait{position:absolute;z-index:0;right:7.2%;top:50%;transform:translateY(-50%);width:min(37vw,610px);aspect-ratio:1;border:1px solid #fff9;border-radius:50%;display:grid;place-items:center;overflow:hidden;background:radial-gradient(circle at 50% 40%,#d8a7a7 0%,#a56878 70%,#76374b 100%);box-shadow:0 0 0 18px #fff1,0 0 0 42px #fff1,0 24px 80px #5b24352b}
+.hero-portrait img{display:block;width:100%;height:100%;object-fit:contain;object-position:center;border-radius:50%;position:relative;z-index:1}
+.portrait-caption{position:absolute;z-index:2;bottom:7%;left:50%;transform:translateX(-50%);width:max-content;max-width:80%;padding:8px 13px;border:1px solid #fff9;border-radius:999px;background:#fff5e9e8;color:#61283a;font:italic 12px/1.3 Georgia,serif;text-align:center;box-shadow:0 6px 18px #3c1c2920}
+.hero-copy{position:relative;z-index:3}
+.hero .scribble,.hero .plane,.hero .spark{z-index:2}
+@media(max-width:900px){
+ .hero{display:flex;flex-direction:column;justify-content:flex-start;padding-top:80px}
+ .hero-portrait{position:relative;right:auto;top:auto;transform:none;order:1;width:min(68vw,420px);margin:16px auto 110px;flex:0 0 auto}
+ .hero-copy{order:0;margin:40px auto 12px!important;width:min(690px,calc(100% - 36px))}
+ .hero .scribble{bottom:28px;right:7%;font-size:1rem}
+ .hero .plane{right:12%;top:8%}
+ .hero .spark{left:7%;bottom:17%}
+}
+@media(max-width:520px){
+ .hero{padding-top:68px;min-height:0}
+ .hero-copy{padding:24px 20px!important;margin-top:28px!important}
+ .hero-portrait{width:min(76vw,340px);margin-top:10px;margin-bottom:105px;box-shadow:0 0 0 10px #fff1,0 0 0 24px #fff1,0 18px 50px #5b24352b}
+ .portrait-caption{font-size:10px;bottom:5%;max-width:88%}
+}
+@media(prefers-reduced-motion:reduce){.hero-portrait{transition:none}}
+.yt-bg,#ytPlayer iframe{position:fixed;width:1px;height:1px;left:0;bottom:0;opacity:0;pointer-events:none;overflow:hidden}
+</style><style>
+
+/* Video gallery refinement: portrait-first cards preserve the complete original frame. */
+.video-grid{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  align-items:start;
+  gap:clamp(18px,2.2vw,30px);
+}
+.video-card{
+  min-width:0;
+  padding:12px;
+  display:flex;
+  flex-direction:column;
+}
+.video-card video{
+  width:100%;
+  height:auto;
+  aspect-ratio:auto;
+  max-height:none;
+  object-fit:contain;
+  background:#21151e;
+  border-radius:3px 14px 3px 14px;
+}
+.video-card p{margin:14px 4px 5px;line-height:1.4}
+.video-feature{
+  grid-column:1/-1;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(220px,.72fr);
+  column-gap:clamp(24px,5vw,72px);
+  align-items:center;
+  padding:18px;
+  background:linear-gradient(125deg,#fff8ed 0%,#f5e5d9 100%);
+  border:1px solid #c59b60;
+  box-shadow:0 22px 50px #492d3418;
+}
+.video-feature .video-ribbon{grid-column:1/-1;grid-row:1;margin-bottom:12px}
+.video-feature video{grid-column:1;grid-row:2;width:min(100%,390px);justify-self:center}
+.video-feature p{grid-column:2;grid-row:2;text-align:left;font-size:clamp(1.2rem,2vw,1.8rem);line-height:1.5;margin:0;padding:24px;border-left:1px solid #c59b6077}
+@media(max-width:900px){
+  .video-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+  .video-feature{grid-column:1/-1;grid-template-columns:minmax(0,1fr) minmax(180px,.8fr);gap:20px}
+}
+@media(max-width:600px){
+  .video-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .video-card{padding:7px;border-radius:4px 14px 4px 14px}
+  .video-card p{font-size:.9rem;margin:10px 3px 4px}
+  .video-feature{grid-column:1/-1;grid-template-columns:minmax(0,1fr);padding:10px;gap:8px}
+  .video-feature .video-ribbon{grid-column:1;grid-row:1}
+  .video-feature video{grid-column:1;grid-row:2;width:min(100%,340px)}
+  .video-feature p{grid-column:1;grid-row:3;text-align:center;border-left:0;border-top:1px solid #c59b6077;padding:15px 8px 6px;font-size:1.1rem}
+}
+
+</style>
+</head>
+<body>
+<div class="intro" id="intro" role="dialog" aria-modal="true" aria-label="Farewell card for Linh"><span class="intro-cloud one" aria-hidden="true">☁</span><span class="intro-cloud two" aria-hidden="true">☁</span><div class="intro-card"><div class="intro-kicker">✦ A little farewell, made with love ✦</div><h1>Linh Nguyen</h1><p>Bold heart. Brilliant mind. A new adventure with your name on it.</p><div class="envelope" id="envelope" aria-hidden="true"></div><button class="cta" id="openCard">Open your next adventure <span aria-hidden="true">→</span></button><p style="font-size:.78rem;margin-top:14px;margin-bottom:0">🎵 Our song starts when you open the card — tap Play our song to pause.</p></div></div><div class="confetti" id="confetti" aria-hidden="true"></div>
+<nav class="topbar" aria-label="Main navigation"><a href="#home">Home</a><a href="#journey">Our Journey</a><a href="#memories">Memories</a><a href="#videos">Videos</a><a href="#messages">Messages</a><a href="#chapter">Next Chapter</a></nav>
+<button class="music" id="musicToggle" aria-label="Toggle music"><span id="musicIcon">♫</span><span class="music-label" id="musicLabel">Play our song</span></button>
+<div id="ytPlayer" class="yt-bg" aria-hidden="true"></div>
+<header class="hero" id="home"><div class="hero-copy"><div class="eyebrow">A little tribute to Linh</div><h1>Born to shine.<em>Ready to roam.</em></h1><p>Dear <strong>Linh</strong>, you bring your own kind of fire into every room, bold ideas, big energy, and a heart that makes the journey better. Here’s a little piece of the story we got to share.</p><a class="cta" href="#journey">Let's look back <span aria-hidden="true">→</span></a></div><div class="hero-portrait" aria-label="A memory of Linh on the company trip"><img src="assets/photos/hero-linh.png" alt="Linh enjoying the company trip" loading="eager"><span class="portrait-caption">A little moment, a lifetime of memories</span></div><div class="floating plane" aria-hidden="true">✦</div><div class="floating spark" aria-hidden="true">✦</div><div class="scribble">A little fire.<br>A lot of heart. ✧</div></header>
+<main>
+<section class="section paper" id="journey"><div class="section-head reveal"><span class="num">01</span><div><h2>Our Journey</h2><p>Từ những câu “quick question” đến meeting không bao giờ quick — cảm ơn chị vì đã làm những ngày đi làm vui hơn. ❤️</p></div></div><div class="journey"><article class="stop reveal"><div class="emoji">📍</div><h3>The First Hello</h3><p>One team, a whole lot of potential.</p></article><article class="stop reveal"><div class="emoji">💬</div><h3>Chat After Chat</h3><p>Questions, ideas, and the occasional chaos.</p></article><article class="stop reveal"><div class="emoji">💻</div><h3>Things We Built</h3><p>Small wins and big teamwork.</p></article><article class="stop reveal"><div class="emoji">☕</div><h3>Coffee & Catch-ups</h3><p>The important meetings, obviously.</p></article><article class="stop reveal"><div class="emoji">💖</div><h3>All the In-Between</h3><p>The moments that made it memorable.</p></article></div></section>
+<section class="section memories" id="memories"><div class="section-head reveal"><span class="num">02</span><div><h2>The Good. The Bad. The Hilarious.</h2><p>Một chút hình ảnh từ những chuyến đi và khoảnh khắc mình đã cùng nhau chia sẻ. Click ảnh để xem rõ hơn nha.</p></div></div><div class="polaroids"><article class="polaroid reveal"><a class="photo" href="assets/photos/memory-01.jpg" target="_blank" rel="noreferrer"><img src="assets/photos/memory-01.jpg" alt="Team selfie on a trip" loading="lazy"></a><div class="caption">Team chaos, but make it a trip ✈️</div></article><article class="polaroid reveal"><a class="photo" href="assets/photos/memory-02.jpg" target="_blank" rel="noreferrer"><img src="assets/photos/memory-02.jpg" alt="Friends grabbing drinks together" loading="lazy"></a><div class="caption">A little drink stop with the crew 🧋</div></article><article class="polaroid reveal"><a class="photo" href="assets/photos/memory-03.jpg" target="_blank" rel="noreferrer"><img src="assets/photos/memory-03.jpg" alt="Friends posing under the sky" loading="lazy"></a><div class="caption">Same crew, different angles ☁️</div></article><article class="polaroid reveal"><a class="photo" href="assets/photos/memory-04.jpg" target="_blank" rel="noreferrer"><img src="assets/photos/memory-04.jpg" alt="Three friends posing together" loading="lazy"></a><div class="caption">Too cool to be serious 🖤</div></article><article class="polaroid reveal"><a class="photo" href="assets/photos/memory-05.jpg" target="_blank" rel="noreferrer"><img src="assets/photos/memory-05.jpg" alt="Two teammates dressed up together" loading="lazy"></a><div class="caption">Serving looks, collecting memories ✨</div></article><article class="polaroid reveal"><a class="photo" href="assets/photos/memory-06.jpg" target="_blank" rel="noreferrer"><img src="assets/photos/memory-06.jpg" alt="Team celebration at the office" loading="lazy"></a><div class="caption">Celebrations are better together ❤️</div></article><article class="polaroid reveal"><a class="photo" href="assets/photos/memory-07.jpg" target="_blank" rel="noreferrer"><img src="assets/photos/memory-07.jpg" alt="Group selfie with friends" loading="lazy"></a><div class="caption">One more for the memory book 📸</div></article><article class="polaroid reveal"><a class="photo" href="assets/photos/memory-08.jpg" target="_blank" rel="noreferrer"><img src="assets/photos/memory-08.jpg" alt="The team dressed up together" loading="lazy"></a><div class="caption">All dressed up, all together ✨</div></article><article class="polaroid reveal"><a class="photo" href="assets/photos/memory-09.jpg" target="_blank" rel="noreferrer"><img src="assets/photos/memory-09.jpg" alt="A candid team selfie under red lanterns" loading="lazy"></a><div class="caption">One of those little moments ❤️</div></article><article class="polaroid reveal"><a class="photo" href="assets/photos/memory-10.jpg" target="_blank" rel="noreferrer"><img src="assets/photos/memory-10.jpg" alt="The team sharing a meal together" loading="lazy"></a><div class="caption">Good food, even better company ♡</div></article><article class="polaroid reveal"><a class="photo" href="assets/photos/memory-11.jpg" target="_blank" rel="noreferrer"><img src="assets/photos/memory-11.jpg" alt="Teammates on the plane together" loading="lazy"></a><div class="caption">Somewhere between here and the next adventure ✈️</div></article><article class="polaroid reveal"><a class="photo" href="assets/photos/memory-12.jpg" target="_blank" rel="noreferrer"><img src="assets/photos/memory-12.jpg" alt="A cheerful dinner selfie with teammates" loading="lazy"></a><div class="caption">A little closer, a little louder, a lot of memories ❤️</div></article></div></section>
+<section class="section paper" id="videos"><div class="section-head reveal"><span class="num">03</span><div><h2>Memories in Motion</h2><p>Một vài chiếc video lưu lại những khoảnh khắc bên nhau. Và cuối cùng là company trip — cả team, cùng một chuyến đi, thật nhiều chuyện để nhớ. ✈️</p></div></div><div class="video-grid"><article class="video-card reveal"><video controls playsinline preload="metadata"><source src="assets/videos/moment-04.mp4" type="video/mp4">Your browser does not support video playback.</video><p>A tiny side quest ✨</p></article><article class="video-card reveal"><video controls playsinline preload="metadata"><source src="assets/videos/moment-02.mp4" type="video/mp4">Your browser does not support video playback.</video><p>A tiny moment ✨</p></article><article class="video-card reveal"><video controls playsinline preload="metadata"><source src="assets/videos/moment-05.mp4" type="video/mp4">Your browser does not support video playback.</video><p>Between destinations ✈️</p></article><article class="video-card reveal"><video controls playsinline preload="metadata"><source src="assets/videos/moment-01.mp4" type="video/mp4">Your browser does not support video playback.</video><p>One for the memory book ♡</p></article><article class="video-card reveal"><video controls playsinline preload="metadata"><source src="assets/videos/moment-03.mp4" type="video/mp4">Your browser does not support video playback.</video><p>A little detour along the way ✨</p></article><article class="video-card reveal"><video controls playsinline preload="metadata"><source src="assets/videos/moment-06.mp4" type="video/mp4">Your browser does not support video playback.</video><p>Our company trip — one team, so many memories. ✈</p></article></div></section>
+<section class="section messages" id="messages"><div class="section-head reveal"><span class="num">04</span><div><h2>A Few Words for You</h2><p>Some lời chúc thật lòng, some lời nhắc nhẹ là dù chị có đi đâu thì team vẫn sẽ réo tên chị trong group chat. ♡</p></div></div><div class="message-grid">
+<article class="note reveal"><div class="note-text">Hữu duyên đồng nghiệp, hữu tình bằng hữu; <br>mai này gặp lại, vẫn nghĩa như xưa. ♡</div><div class="sign">Chị Rachel</div></article>
+<article class="note reveal"><div class="note-text">Tiền đồ như gấm, hoài bão rộng mở.<br><br>Sự nghiệp như xuân, phúc vận dài lâu. ✨</div><div class="sign">Chị Nora</div></article>
+<article class="note reveal"><div class="note-text">Chúc chị Linh sang chapter mới vẫn slay như thường lệ: deadline có dí thì chị vẫn chill, idea có bí thì chị vẫn shine. Mong chị gặp toàn người tốt, job xịn, lương tăng đều — và nhớ tụi em đều đều nha! 💅✨</div><div class="sign">Em Kate</div></article>
+<article class="note reveal"><div class="note-text">Chúc chị đi đâu cũng gặp đúng người, đúng thời điểm, đúng deal ngon. Mong những ngày phía trước nhiều niềm vui, nhiều cơ hội xịn và ít drama hơn công ty L. Nhưng drama vui vui thì kể tụi em nghe với! 🥹❤️</div><div class="sign">Em Meggie</div></article>
+<article class="note reveal"><div class="note-text">New chapter, new adventures — nhưng xin chị đừng new phone number, new account rồi quên luôn team cũ nha. Chúc chị luôn được làm điều mình thích, với những người khiến mỗi ngày đi làm đáng mong chờ hơn. ♡</div><div class="sign">Team mình</div></article>
+<article class="note reveal"><div class="note-text">Officially wishing you all the best. Unofficially: group chat vẫn hoạt động, memes vẫn gửi, và chị vẫn có trách nhiệm xuất hiện trong những buổi tụ tập. This is a lifelong subscription, no cancellation policy. 😂</div><div class="sign">Your forever work besties</div></article>
+</div></section>
+<section class="section chapter" id="chapter"><div class="chapter-inner"><div class="reveal"><div class="eyebrow" style="color:#f4c2a2">05 · Your next chapter</div><h2>This isn't goodbye.<br>It's “see you later.”</h2><p>Mong chặng đường tiếp theo của chị có thật nhiều người tử tế, cơ hội thú vị và những niềm vui bất ngờ. Chúc chị luôn được làm điều mình yêu — cảm ơn chị vì đã là một phần trong câu chuyện của tụi em, Linh.</p><div class="signoff">Go do wonderful things. Tụi em luôn cheering for chị. ♡</div></div><div class="road-signs reveal" aria-label="Wishes for Linh"><span>↗ New places</span><span>↗ New people</span><span>↗ New stories</span><span>♡ Same amazing you</span></div></div></section>
+</main><footer class="footer">Made with lots of love (and a tiny bit of team chaos) · For Linh Nguyen ✦</footer><div class="toast" id="toast" role="status"></div>
+<script>
+const revealItems=document.querySelectorAll('.reveal');
+if('IntersectionObserver' in window){const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.12});revealItems.forEach(el=>observer.observe(el));}else revealItems.forEach(el=>el.classList.add('visible'));
+const toggle=document.getElementById('musicToggle'),icon=document.getElementById('musicIcon'),label=document.getElementById('musicLabel'),toast=document.getElementById('toast');
+const SONG_ID='N8Y_X5wZa-E';
+let toastTimer,ytPlayer=null,wantPlaying=true,unlocked=false;
+function showToast(message){toast.textContent=message;toast.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove('show'),3200)}
+function setMusicUI(playing){icon.textContent=playing?'Ⅱ':'♫';label.textContent=playing?'Pause our song':'Play our song';toggle.setAttribute('aria-pressed',playing?'true':'false')}
+function isPlaying(){return ytPlayer&&typeof YT!=='undefined'&&ytPlayer.getPlayerState()===YT.PlayerState.PLAYING}
+function isAudible(){return isPlaying()&&unlocked&&ytPlayer&&!ytPlayer.isMuted()}
+function playSong(){wantPlaying=true;unlocked=true;if(ytPlayer&&ytPlayer.playVideo){ytPlayer.unMute();ytPlayer.setVolume(80);ytPlayer.playVideo()}if(isPlaying())setMusicUI(true)}
+function pauseSong(){wantPlaying=false;if(ytPlayer&&ytPlayer.pauseVideo)ytPlayer.pauseVideo();setMusicUI(false)}
+toggle.addEventListener('click',()=>{if(isAudible())pauseSong();else playSong()});
+window.onYouTubeIframeAPIReady=function(){
+  ytPlayer=new YT.Player('ytPlayer',{
+    videoId:SONG_ID,
+    width:1,
+    height:1,
+    playerVars:{autoplay:1,controls:0,disablekb:1,fs:0,modestbranding:1,playsinline:1,rel:0,loop:1,playlist:SONG_ID},
+    events:{
+      onReady:function(e){e.target.setVolume(80);if(!wantPlaying)return;if(unlocked){e.target.unMute();e.target.playVideo()}else{e.target.mute();e.target.playVideo()}},
+      onStateChange:function(e){
+        if(e.data===YT.PlayerState.PLAYING)setMusicUI(unlocked&&!ytPlayer.isMuted());
+        else if(e.data===YT.PlayerState.PAUSED||e.data===YT.PlayerState.ENDED)setMusicUI(false);
+        if(e.data===YT.PlayerState.ENDED&&wantPlaying)e.target.playVideo();
+      },
+      onError:function(){showToast('Could not start the song. Try Play our song again.')}
+    }
+  });
+};
+const intro=document.getElementById('intro'),envelope=document.getElementById('envelope'),openCard=document.getElementById('openCard'),confetti=document.getElementById('confetti');
+function celebrate(){const colors=['#e9788b','#efc67d','#a9c7e8','#c7b7e9','#9ccbb7','#f6a96b'];for(let i=0;i<85;i++){const bit=document.createElement('i');bit.className='confetti-piece';bit.style.left=Math.random()*100+'%';bit.style.background=colors[i%colors.length];bit.style.setProperty('--dur',(2+Math.random()*1.8)+'s');bit.style.setProperty('--delay',(Math.random()*.45)+'s');bit.style.setProperty('--drift',((Math.random()-.5)*260)+'px');bit.style.setProperty('--rot',(Math.random()*180)+'deg');if(i%4===0){bit.style.borderRadius='50%';bit.style.width='7px';bit.style.height='7px'}confetti.appendChild(bit);setTimeout(()=>bit.remove(),4300)}}
+openCard.addEventListener('click',()=>{playSong();envelope.classList.add('open');intro.classList.add('opening');celebrate();setTimeout(()=>{intro.classList.add('hidden');document.getElementById('home').scrollIntoView({behavior:'smooth'});showToast('The adventure begins, Linh! ✨')},650)});
+const ytTag=document.createElement('script');ytTag.src='https://www.youtube.com/iframe_api';document.head.appendChild(ytTag);
+// Smoothly close the mobile nav after a section is selected.
+document.querySelectorAll('.topbar a').forEach(a=>a.addEventListener('click',()=>{document.activeElement.blur()}));
+</script>
+</body></html>
