@@ -159,7 +159,7 @@ body{background:#f3e9e1;color:var(--ink)}
 /* Hero portrait: preserve the source photo proportions inside the circular frame. */
 .hero{isolation:isolate}
 .hero-portrait{position:absolute;z-index:0;right:7.2%;top:50%;transform:translateY(-50%);width:min(37vw,610px);aspect-ratio:1;border:1px solid #fff9;border-radius:50%;display:grid;place-items:center;overflow:hidden;background:radial-gradient(circle at 50% 40%,#d8a7a7 0%,#a56878 70%,#76374b 100%);box-shadow:0 0 0 18px #fff1,0 0 0 42px #fff1,0 24px 80px #5b24352b}
-.hero-portrait img{display:block;width:100%;height:100%;object-fit:contain;object-position:center;border-radius:50%;position:relative;z-index:1}
+.hero-portrait img{    margin-top: -25px;  display:block;width:100%;height:100%;object-fit:contain;object-position:center;border-radius:50%;position:relative;z-index:1}
 .portrait-caption{position:absolute;z-index:2;bottom:7%;left:50%;transform:translateX(-50%);width:max-content;max-width:80%;padding:8px 13px;border:1px solid #fff9;border-radius:999px;background:#fff5e9e8;color:#61283a;font:italic 12px/1.3 Georgia,serif;text-align:center;box-shadow:0 6px 18px #3c1c2920}
 .hero-copy{position:relative;z-index:3}
 .hero .scribble,.hero .plane,.hero .spark{z-index:2}
