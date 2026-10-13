@@ -178,7 +178,6 @@ body{background:#f3e9e1;color:var(--ink)}
  .portrait-caption{font-size:10px;bottom:5%;max-width:88%}
 }
 @media(prefers-reduced-motion:reduce){.hero-portrait{transition:none}}
-.yt-bg,#ytPlayer iframe{position:fixed;width:1px;height:1px;left:0;bottom:0;opacity:0;pointer-events:none;overflow:hidden}
 </style><style>
 
 /* Video gallery refinement: portrait-first cards preserve the complete original frame. */
@@ -237,7 +236,7 @@ body{background:#f3e9e1;color:var(--ink)}
 <div class="intro" id="intro" role="dialog" aria-modal="true" aria-label="Farewell card for Linh"><span class="intro-cloud one" aria-hidden="true">☁</span><span class="intro-cloud two" aria-hidden="true">☁</span><div class="intro-card"><div class="intro-kicker">✦ A little farewell, made with love ✦</div><h1>Linh Nguyen</h1><p>Bold heart. Brilliant mind. A new adventure with your name on it.</p><div class="envelope" id="envelope" aria-hidden="true"></div><button class="cta" id="openCard">Open your next adventure <span aria-hidden="true">→</span></button><p style="font-size:.78rem;margin-top:14px;margin-bottom:0">🎵 Our song starts when you open the card, tap Play our song to pause.</p></div></div><div class="confetti" id="confetti" aria-hidden="true"></div>
 <nav class="topbar" aria-label="Main navigation"><a href="#home">Home</a><a href="#journey">Our Journey</a><a href="#memories">Memories</a><a href="#videos">Videos</a><a href="#messages">Messages</a><a href="#chapter">Next Chapter</a></nav>
 <button class="music" id="musicToggle" aria-label="Toggle music"><span id="musicIcon">♫</span><span class="music-label" id="musicLabel">Play our song</span></button>
-<div id="ytPlayer" class="yt-bg" aria-hidden="true"></div>
+<audio id="bgMusic" loop preload="auto"><source src="assets/team-song.mp3" type="audio/mpeg"></audio>
 <header class="hero" id="home"><div class="hero-copy"><div class="eyebrow">A little tribute to Linh</div><h1>Born to shine.<em>Ready to roam.</em></h1><p>Dear <strong>Linh</strong>, you bring your own kind of fire into every room, bold ideas, big energy, and a heart that makes the journey better. Here’s a little piece of the story we got to share.</p><a class="cta" href="#journey">Let's look back <span aria-hidden="true">→</span></a></div><div class="hero-portrait" aria-label="A memory of Linh on the company trip"><img src="assets/photos/hero-linh.png" alt="Linh enjoying the company trip" loading="eager"><span class="portrait-caption">A little moment, a lifetime of memories</span></div><div class="floating plane" aria-hidden="true">✦</div><div class="floating spark" aria-hidden="true">✦</div><div class="scribble">A little fire.<br>A lot of heart. ✧</div></header>
 <main>
 <section class="section paper" id="journey"><div class="section-head reveal"><span class="num">01</span><div><h2>Our Journey</h2><p>Từ những câu “quick question” đến meeting không bao giờ quick, cảm ơn chị vì đã làm những ngày đi làm vui hơn. ❤️</p></div></div><div class="journey"><article class="stop reveal"><div class="emoji">📍</div><h3>The First Hello</h3><p>One team, a whole lot of potential.</p></article><article class="stop reveal"><div class="emoji">💬</div><h3>Chat After Chat</h3><p>Questions, ideas, and the occasional chaos.</p></article><article class="stop reveal"><div class="emoji">💻</div><h3>Things We Built</h3><p>Small wins and big teamwork.</p></article><article class="stop reveal"><div class="emoji">☕</div><h3>Coffee & Catch-ups</h3><p>The important meetings, obviously.</p></article><article class="stop reveal"><div class="emoji">💖</div><h3>All the In-Between</h3><p>The moments that made it memorable.</p></article></div></section>
@@ -256,37 +255,18 @@ body{background:#f3e9e1;color:var(--ink)}
 <script>
 const revealItems=document.querySelectorAll('.reveal');
 if('IntersectionObserver' in window){const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.12});revealItems.forEach(el=>observer.observe(el));}else revealItems.forEach(el=>el.classList.add('visible'));
-const toggle=document.getElementById('musicToggle'),icon=document.getElementById('musicIcon'),label=document.getElementById('musicLabel'),toast=document.getElementById('toast');
-const SONG_ID='N8Y_X5wZa-E';
-let toastTimer,ytPlayer=null,wantPlaying=true,unlocked=false;
+const music=document.getElementById('bgMusic'),toggle=document.getElementById('musicToggle'),icon=document.getElementById('musicIcon'),label=document.getElementById('musicLabel'),toast=document.getElementById('toast');
+let toastTimer;
 function showToast(message){toast.textContent=message;toast.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove('show'),3200)}
 function setMusicUI(playing){icon.textContent=playing?'Ⅱ':'♫';label.textContent=playing?'Pause our song':'Play our song';toggle.setAttribute('aria-pressed',playing?'true':'false')}
-function isPlaying(){return ytPlayer&&typeof YT!=='undefined'&&ytPlayer.getPlayerState()===YT.PlayerState.PLAYING}
-function isAudible(){return isPlaying()&&unlocked&&ytPlayer&&!ytPlayer.isMuted()}
-function playSong(){wantPlaying=true;unlocked=true;if(ytPlayer&&ytPlayer.playVideo){ytPlayer.unMute();ytPlayer.setVolume(80);ytPlayer.playVideo()}if(isPlaying())setMusicUI(true)}
-function pauseSong(){wantPlaying=false;if(ytPlayer&&ytPlayer.pauseVideo)ytPlayer.pauseVideo();setMusicUI(false)}
-toggle.addEventListener('click',()=>{if(isAudible())pauseSong();else playSong()});
-window.onYouTubeIframeAPIReady=function(){
-  ytPlayer=new YT.Player('ytPlayer',{
-    videoId:SONG_ID,
-    width:1,
-    height:1,
-    playerVars:{autoplay:1,controls:0,disablekb:1,fs:0,modestbranding:1,playsinline:1,rel:0,loop:1,playlist:SONG_ID},
-    events:{
-      onReady:function(e){e.target.setVolume(80);if(!wantPlaying)return;if(unlocked){e.target.unMute();e.target.playVideo()}else{e.target.mute();e.target.playVideo()}},
-      onStateChange:function(e){
-        if(e.data===YT.PlayerState.PLAYING)setMusicUI(unlocked&&!ytPlayer.isMuted());
-        else if(e.data===YT.PlayerState.PAUSED||e.data===YT.PlayerState.ENDED)setMusicUI(false);
-        if(e.data===YT.PlayerState.ENDED&&wantPlaying)e.target.playVideo();
-      },
-      onError:function(){showToast('Could not start the song. Try Play our song again.')}
-    }
-  });
-};
+async function playSong(){try{await music.play();setMusicUI(true)}catch(e){setMusicUI(false);showToast('Tap Play our song to start the music.')}}
+function pauseSong(){music.pause();setMusicUI(false)}
+toggle.addEventListener('click',()=>{if(music.paused)playSong();else pauseSong()});
+music.addEventListener('play',()=>setMusicUI(true));
+music.addEventListener('pause',()=>setMusicUI(false));
 const intro=document.getElementById('intro'),envelope=document.getElementById('envelope'),openCard=document.getElementById('openCard'),confetti=document.getElementById('confetti');
 function celebrate(){const colors=['#e9788b','#efc67d','#a9c7e8','#c7b7e9','#9ccbb7','#f6a96b'];for(let i=0;i<85;i++){const bit=document.createElement('i');bit.className='confetti-piece';bit.style.left=Math.random()*100+'%';bit.style.background=colors[i%colors.length];bit.style.setProperty('--dur',(2+Math.random()*1.8)+'s');bit.style.setProperty('--delay',(Math.random()*.45)+'s');bit.style.setProperty('--drift',((Math.random()-.5)*260)+'px');bit.style.setProperty('--rot',(Math.random()*180)+'deg');if(i%4===0){bit.style.borderRadius='50%';bit.style.width='7px';bit.style.height='7px'}confetti.appendChild(bit);setTimeout(()=>bit.remove(),4300)}}
 openCard.addEventListener('click',()=>{playSong();envelope.classList.add('open');intro.classList.add('opening');celebrate();setTimeout(()=>{intro.classList.add('hidden');document.getElementById('home').scrollIntoView({behavior:'smooth'});showToast('The adventure begins, Linh! ✨')},650)});
-const ytTag=document.createElement('script');ytTag.src='https://www.youtube.com/iframe_api';document.head.appendChild(ytTag);
 // Smoothly close the mobile nav after a section is selected.
 document.querySelectorAll('.topbar a').forEach(a=>a.addEventListener('click',()=>{document.activeElement.blur()}));
 </script>
